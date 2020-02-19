@@ -13,7 +13,9 @@ function timer() {
   clockRate = 1;
   
   totalStartSec = ((dayStart*24 + hrStart)*60 + minStart)*60 + secStart;
-  curTotalSec = totalStartSec - Math.round((time - inPoint)*clockRate);
+  now = new Date();
+  secSinceMidnight = 3600*now.getHours() + 60*now.getMinutes() + now.getSeconds();
+  curTotalSec = totalStartSec - secSinceMidnight;
   
   curDay = Math.floor(curTotalSec/(24*3600));
   curHr = Math.floor((curTotalSec%(24*3600))/3600);
