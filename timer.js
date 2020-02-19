@@ -21,7 +21,7 @@ function timer() {
   curHr = Math.floor((curTotalSec%(24*3600))/3600);
   curMin = Math.floor((curTotalSec%3600)/60);
   curSec = curTotalSec%60;
-  leftTime = padZero(curDay) + ":" + padZero(curMin) + ":" + padZero(curSec);
+  leftTime = padZero(curDay) + ":" + padZero(curHr) + ":" + padZero(curMin) + ":" + padZero(curSec);
   document.getElementById("timer").innerHTML = leftTime;
 }
 var myTimer = setInterval(timer,1000);
