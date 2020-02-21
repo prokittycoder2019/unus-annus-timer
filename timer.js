@@ -9,7 +9,7 @@ function timer() {
   now = new Date();
   seconds = endDate.getTime() - now.getTime();
   
-  curDay = Math.floor((seconds/(24*3600));
+  curDay = Math.floor(seconds/(24*3600));
   curHr = Math.floor((seconds%(24*3600))/3600);
   curMin = Math.floor((seconds%3600)/60);
   curSec = seconds%60;
