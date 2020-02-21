@@ -5,4 +5,5 @@ h1 {
   font-family: 'Lato' , 'Arial' , 'Sans-Serif';
   font-size:4em;
   text-align:center;
+  text-transform: capitalize;
 }
