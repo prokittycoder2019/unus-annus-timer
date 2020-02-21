@@ -5,23 +5,16 @@ function padZero(n){
 }
 
 function timer() {
-  dayStart = 268;
-  hrStart = 12;
-  minStart = 0;
-  secStart = 0;
-  
-  clockRate = 1;
-  
-  totalStartSec = ((dayStart*24 + hrStart)*60 + minStart)*60 + secStart;
+  endDate = new Date("15 Sep 2020 00:00:00 PST");  
   now = new Date();
-  secSinceMidnight = 3600*now.getHours() + 60*now.getMinutes() + now.getSeconds();
-  curTotalSec = totalStartSec - secSinceMidnight;
+  seconds = endDate.getTime() - now.getTime();
   
-  curDay = Math.floor(curTotalSec/(24*3600));
-  curHr = Math.floor((curTotalSec%(24*3600))/3600);
-  curMin = Math.floor((curTotalSec%3600)/60);
-  curSec = curTotalSec%60;
+  curDay = Math.floor((seconds/(24*3600));
+  curHr = Math.floor((seconds%(24*3600))/3600);
+  curMin = Math.floor((seconds%3600)/60);
+  curSec = seconds%60;
   leftTime = padZero(curDay) + ":" + padZero(curHr) + ":" + padZero(curMin) + ":" + padZero(curSec);
   document.getElementById("timer").innerHTML = leftTime;
 }
+ 
 var myTimer = setInterval(timer,1000);
