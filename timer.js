@@ -7,7 +7,7 @@ function padZero(n){
 function timer() {
   endDate = new Date("15 Sep 2020 00:00:00 PST");  
   now = new Date();
-  seconds = endDate.getTime() - now.getTime();
+  seconds = Math.floor((endDate.getTime() - now.getTime())/1000);
   
   curDay = Math.floor(seconds/(24*3600));
   curHr = Math.floor((seconds%(24*3600))/3600);
