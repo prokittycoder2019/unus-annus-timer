@@ -5,7 +5,7 @@ function padZero(n){
 }
 
 function timer() {
-  endDate = new Date("15 Sep 2020 00:00:00 PST");  
+  endDate = new Date("15 Nov 2020 00:00:00 PST");  
   now = new Date();
   seconds = Math.floor((endDate.getTime() - now.getTime())/1000);
   
